@@ -9,3 +9,9 @@ The recommended way to install composer packages is:
 ```
 composer require oxenti/linkedin
 ```
+In your app's 'AppController.php' set up the Auth componet:
+```php
+    ...
+    $this->loadComponent('Linkedin.Linkedin');
+    ...
+```
