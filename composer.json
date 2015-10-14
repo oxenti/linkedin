@@ -1,5 +1,5 @@
 {
-    "name": "your-name-here/Linkedin",
+    "name": "oxenti/linkedin",
     "description": "Linkedin plugin for CakePHP",
     "type": "cakephp-plugin",
     "require": {
