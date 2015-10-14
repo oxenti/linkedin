@@ -16,7 +16,7 @@ class LinkedinComponent extends Component
         Configure::load('Linkedin.linkedin_credentials');
         $credentials = Configure::read('credentials');
         $linkedIn = new LinkedInLib($credentials['api_key'], $credentials['api_secret']);
-
+        
         $result = $linkedIn->linkedinget($resource, $token);
         return $result;
     }

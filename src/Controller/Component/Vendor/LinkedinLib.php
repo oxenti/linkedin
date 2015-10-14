@@ -29,13 +29,13 @@ class LinkedinLib extends LinkedIn
         // Add access token to the headers
         $options['headers']['Authorization'] = sprintf('Bearer %s', $token);
         // Do logic and adjustments to the options
-        $linkedIn->filterRequestOption($options);
+        $this->filterRequestOption($options);
 
         // Generate an url
-        $url = $linkedIn->getUrlGenerator()->getUrl('api', $resource, isset($options['query']) ? $options['query'] : []);
+        $url = $this->getUrlGenerator()->getUrl('api', $resource, isset($options['query']) ? $options['query'] : []);
         unset($options['query']);
         // $method that url
-        $result = $linkedIn->getRequest()->send($method, $url, $options);
+        $result = $this->getRequest()->send($method, $url, $options);
 
         return $result;
     }
